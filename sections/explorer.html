@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explorer 2- Paana</title>
+  <meta name="description" content="Paana - Base de connaissances sur la santé publique en Polynésie française">
+  <link rel="stylesheet" href="explorer.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <span class="brand">Paana</span>
+      <div class="trait"></div>
+    </div>
+    <nav>
+      <a href="../a-propos/a-propos.html">A PROPOS</a>
+      <a href="explorer.html">EXPLORER</a>
+      <a href="https://forms.gle/WNCSjBWsjA5XmCrp8" target="_blank">SOUMETTRE</a>
+      <a href="../aide/aide.html" title="Aide">
+        <i class="fas fa-question"></i>
+      </a>
+      <a href="mailto:PaanaConseil@outlook.com" title="Contacter par mail">
+        <i class="fas fa-envelope fa-lg"></i>
+      </a>
+      <a href="../index.html" title="Accueil">
+        <i class="fas fa-house"></i> 
+      </a>
+    </nav>
+  </header>
+
+  <main class="layout-3col">
+    <div class="left-col">
+      <div class="filters">
+        <h3 class="filters-title">Trier les événements par :</h3>
+
+        <div class="dropdown-checkbox">
+          <p class="filter-label">
+            Catégorie(s)
+           </p>
+          <div id="categoryDropdown"></div>
+        </div>
+
+        <div class="dropdown-checkbox">
+          <p class="filter-label">
+            Mots-clés (issus du DeCS)
+            </p>
+          <div id="keywordDropdown"></div>
+        </div>
+
+        <input type="text" id="searchInput" placeholder="Recherche globale..." oninput="updateTimeline()">
+
+        <div id="active-filters-section" style="display: none; margin-top: 20px;">
+          <p><strong>Filtres sélectionnés :</strong></p>
+          <div id="active-filters"></div>
+        </div>
+
+        <button class="reset-btn" onclick="resetFilters()">Réinitialiser</button>
+      </div>
+    </div>
+
+    <div class="center-col">
+      <div class="timeline" id="timeline"></div>
+    </div>
+<div class="right-col">
+  <div class="event-details">
+    <div id="event-details-container"></div>
+   <div class="event-arrows">
+  <button onclick="navigateEvent(-1)" title="Événement précédent" aria-label="Événement précédent">◀</button>
+  <button onclick="navigateEvent(1)" title="Événement suivant" aria-label="Événement suivant">▶</button>
+</div>
+  </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Emmanuelle RUPP-TERRIS.<br>Tous droits réservés. Reproduction interdite sans autorisation.</p>
+  </footer>
+
+  <script src="explorer.js"></script>
+  <div id="help-floating" onclick="window.location.href='../aide/aide.html'" title="Aide à l’utilisation">
+  <i class="fas fa-circle-question"></i>
+</div>
+</body>
+</html>

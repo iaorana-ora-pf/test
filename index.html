@@ -1,12 +1,49 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paana Timeline</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PAANA - Accueil</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/a-propos.css">
+  <link rel="stylesheet" href="css/explorer.css">
+  <link rel="stylesheet" href="css/aide.css">
 </head>
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+<body class="text-gray-800 bg-gray-50">
+
+<header class="bg-white shadow fixed w-full top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-blue-700">PAANA</h1>
+    <nav class="space-x-6 text-sm text-gray-600 font-medium">
+      <a href="#a-propos" class="hover:text-blue-700">À propos</a>
+      <a href="#frise" class="hover:text-blue-700">Frise</a>
+      <a href="#soumettre" class="hover:text-blue-700">Soumettre</a>
+    </nav>
+  </div>
+</header>
+
+<main class="pt-20">
+  <section id="a-propos" class="py-20 bg-blue-50">
+    <!-- #include file="sections/a-propos.html" -->
+  </section>
+
+  <section id="frise" class="py-20 bg-white">
+    <!-- #include file="sections/explorer.html" -->
+  </section>
+
+  <section id="soumettre" class="py-20 bg-white">
+    <!-- #include file="sections/aide.html" -->
+  </section>
+</main>
+
+<footer class="bg-white py-10 border-t">
+  <div class="max-w-6xl mx-auto px-6 text-center text-sm text-gray-500">
+    © 2025 PAANA — Tous droits réservés • <a href="#" class="underline">Mentions légales</a>
+  </div>
+</footer>
+
+<script src="js/explorer.js"></script>
+
 </body>
 </html>
